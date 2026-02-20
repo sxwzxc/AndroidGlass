@@ -1,53 +1,77 @@
 <resources>
     <string name="app_name">AndroidGlass</string>
-    <string name="hello_message">Hello AndroidGlass!</string>
+    <string name="hello_message">你好 AndroidGlass！</string>
 
     <!-- UI Demo strings -->
-    <string name="section_buttons">Buttons</string>
-    <string name="section_inputs">Input Fields</string>
-    <string name="section_list">Contact List</string>
-    <string name="section_dropdown">Dropdown / ComboBox</string>
-    <string name="section_selection">Selection Controls</string>
-    <string name="section_progress">Progress &amp; Seek</string>
-    <string name="section_chips">Chips &amp; Tags</string>
-    <string name="section_dialogs">Dialogs</string>
+    <string name="header_subtitle">液态玻璃 UI 演示</string>
+    <string name="section_buttons">按钮</string>
+    <string name="section_inputs">输入框</string>
+    <string name="section_list">联系人列表</string>
+    <string name="section_dropdown">下拉选择</string>
+    <string name="section_selection">选择控件</string>
+    <string name="section_progress">进度与滑块</string>
+    <string name="section_chips">标签</string>
+    <string name="section_dialogs">对话框</string>
 
-    <string name="btn_primary">Primary Action</string>
-    <string name="btn_secondary">Secondary</string>
-    <string name="btn_outlined">Outlined</string>
-    <string name="btn_show_dialog">Show Alert Dialog</string>
-    <string name="btn_show_bottom_sheet">Show Bottom Sheet</string>
+    <string name="btn_primary">主要操作</string>
+    <string name="btn_secondary">次要操作</string>
+    <string name="btn_outlined">边框按钮</string>
+    <string name="btn_show_dialog">显示对话框</string>
+    <string name="btn_show_bottom_sheet">显示底部弹窗</string>
 
-    <string name="hint_name">Enter your name</string>
-    <string name="hint_email">Enter email address</string>
-    <string name="hint_message">Type a message…</string>
+    <string name="hint_name">请输入姓名</string>
+    <string name="hint_email">请输入邮箱地址</string>
+    <string name="hint_message">请输入消息…</string>
 
-    <string name="dialog_title">Glass Alert</string>
-    <string name="dialog_message">This is a liquid glass styled alert dialog with a frosted glass appearance and a smooth translucent background.</string>
-    <string name="dialog_confirm">Confirm</string>
-    <string name="dialog_dismiss">Dismiss</string>
+    <string name="dialog_title">玻璃弹窗</string>
+    <string name="dialog_message">这是一个液态玻璃风格的弹窗，具有磨砂玻璃外观和平滑的半透明模糊背景效果。</string>
+    <string name="dialog_confirm">确认</string>
+    <string name="dialog_dismiss">取消</string>
 
-    <string name="bottom_sheet_title">Glass Bottom Sheet</string>
-    <string name="bottom_sheet_option_share">Share</string>
-    <string name="bottom_sheet_option_copy">Copy Link</string>
-    <string name="bottom_sheet_option_download">Download</string>
-    <string name="bottom_sheet_option_delete">Delete</string>
-    <string name="bottom_sheet_close">Close</string>
-    <string name="background_scene">Colorful liquid background scene</string>
-    <string name="sidebar_title">Sidebar</string>
-    <string name="sidebar_item_home">Home</string>
-    <string name="sidebar_item_search">Search</string>
-    <string name="sidebar_item_settings">Settings</string>
-    <string name="floating_item_scan">Scan</string>
-    <string name="floating_item_add">Add</string>
-    <string name="floating_item_chat">Chat</string>
+    <string name="bottom_sheet_title">玻璃底部弹窗</string>
+    <string name="bottom_sheet_option_share">分享</string>
+    <string name="bottom_sheet_option_copy">复制链接</string>
+    <string name="bottom_sheet_option_download">下载</string>
+    <string name="bottom_sheet_option_delete">删除</string>
+    <string name="bottom_sheet_close">关闭</string>
+    <string name="background_scene">液态玻璃背景场景</string>
+    <string name="sidebar_title">侧边栏</string>
+    <string name="sidebar_item_home">首页</string>
+    <string name="sidebar_item_search">搜索</string>
+    <string name="sidebar_item_settings">设置</string>
+    <string name="floating_item_scan">扫描</string>
+    <string name="floating_item_add">添加</string>
+    <string name="floating_item_chat">聊天</string>
+
+    <string name="check_blur">启用模糊效果</string>
+    <string name="check_animations">启用动画效果</string>
+    <string name="check_dark_mode">深色模式背景</string>
+    <string name="radio_frosted">磨砂玻璃</string>
+    <string name="radio_liquid">液态玻璃</string>
+    <string name="radio_crystal">水晶玻璃</string>
+    <string name="label_loading">加载中… 65%</string>
+    <string name="label_volume">音量</string>
+    <string name="chip_blur">模糊</string>
+    <string name="chip_glass">玻璃</string>
+    <string name="chip_light">明亮</string>
+    <string name="chip_dark">暗黑</string>
+    <string name="chip_aurora">极光</string>
+
+    <string name="toast_primary">已点击主要操作！</string>
+    <string name="toast_secondary">已点击次要操作！</string>
+    <string name="toast_outlined">已点击边框按钮！</string>
+    <string name="toast_confirmed">已确认！</string>
+    <string name="toast_share">已选择分享</string>
+    <string name="toast_copy">链接已复制</string>
+    <string name="toast_download">开始下载</string>
+    <string name="toast_delete">已删除！</string>
 
     <string-array name="dropdown_options">
-        <item>Frosted Glass</item>
-        <item>Liquid Glass</item>
-        <item>Dark Glass</item>
-        <item>Aurora Glass</item>
-        <item>Crystal Glass</item>
-        <item>Smoke Glass</item>
+        <item>磨砂玻璃</item>
+        <item>液态玻璃</item>
+        <item>暗黑玻璃</item>
+        <item>极光玻璃</item>
+        <item>水晶玻璃</item>
+        <item>烟雾玻璃</item>
     </string-array>
 </resources>

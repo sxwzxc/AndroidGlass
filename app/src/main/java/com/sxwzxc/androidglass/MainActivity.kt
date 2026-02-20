@@ -20,13 +20,13 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     private val contacts = listOf(
-        Contact("Alice Chen", "UI Designer", "Online"),
-        Contact("Bob Martinez", "Android Dev", "Online"),
-        Contact("Carol White", "Product Lead", "Away"),
-        Contact("David Kim", "Backend Dev", "Online"),
-        Contact("Eva Müller", "QA Engineer", "Offline"),
-        Contact("Frank Li", "DevOps", "Online"),
-        Contact("Grace Park", "Data Scientist", "Away"),
+        Contact("陈晓明", "UI 设计师", "在线"),
+        Contact("张伟", "Android 开发", "在线"),
+        Contact("李芳", "产品负责人", "离开"),
+        Contact("王强", "后端开发", "在线"),
+        Contact("赵丽", "测试工程师", "离线"),
+        Contact("刘洋", "运维工程师", "在线"),
+        Contact("孙雪", "数据分析师", "离开"),
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,9 +34,14 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setupBlurEffects()
         setupRecyclerView()
         setupSpinner()
         setupButtons()
+    }
+
+    private fun setupBlurEffects() {
+        GlassBlurHelper.applyBackgroundBlur(binding.bgScene)
     }
 
     private fun setupRecyclerView() {
@@ -55,13 +60,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupButtons() {
         binding.btnPrimary.setOnClickListener {
-            Toast.makeText(this, "Primary action tapped!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.toast_primary), Toast.LENGTH_SHORT).show()
         }
         binding.btnSecondary.setOnClickListener {
-            Toast.makeText(this, "Secondary action tapped!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.toast_secondary), Toast.LENGTH_SHORT).show()
         }
         binding.btnOutlined.setOnClickListener {
-            Toast.makeText(this, "Outlined button tapped!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.toast_outlined), Toast.LENGTH_SHORT).show()
         }
         binding.btnShowDialog.setOnClickListener { showAlertDialog() }
         binding.btnShowBottomSheet.setOnClickListener { showBottomSheet() }
@@ -73,12 +78,13 @@ class MainActivity : AppCompatActivity() {
             .setView(dialogView)
             .create()
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        dialog.window?.let { GlassBlurHelper.applyWindowBlur(it) }
         dialog.show()
 
         dialogView.findViewById<TextView>(R.id.dialogTitle).text = getString(R.string.dialog_title)
         dialogView.findViewById<TextView>(R.id.dialogMessage).text = getString(R.string.dialog_message)
         dialogView.findViewById<Button>(R.id.btnDialogConfirm).setOnClickListener {
-            Toast.makeText(this, "Confirmed!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.toast_confirmed), Toast.LENGTH_SHORT).show()
             dialog.dismiss()
         }
         dialogView.findViewById<Button>(R.id.btnDialogDismiss).setOnClickListener {
@@ -91,21 +97,22 @@ class MainActivity : AppCompatActivity() {
         val sheetView = LayoutInflater.from(this).inflate(R.layout.bottom_sheet_glass, null)
         bottomSheet.setContentView(sheetView)
         bottomSheet.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        bottomSheet.window?.let { GlassBlurHelper.applyWindowBlur(it) }
 
         sheetView.findViewById<View>(R.id.optionShare).setOnClickListener {
-            Toast.makeText(this, "Share selected", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.toast_share), Toast.LENGTH_SHORT).show()
             bottomSheet.dismiss()
         }
         sheetView.findViewById<View>(R.id.optionCopy).setOnClickListener {
-            Toast.makeText(this, "Link copied", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.toast_copy), Toast.LENGTH_SHORT).show()
             bottomSheet.dismiss()
         }
         sheetView.findViewById<View>(R.id.optionDownload).setOnClickListener {
-            Toast.makeText(this, "Download started", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.toast_download), Toast.LENGTH_SHORT).show()
             bottomSheet.dismiss()
         }
         sheetView.findViewById<View>(R.id.optionDelete).setOnClickListener {
-            Toast.makeText(this, "Deleted!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.toast_delete), Toast.LENGTH_SHORT).show()
             bottomSheet.dismiss()
         }
         sheetView.findViewById<View>(R.id.btnClose).setOnClickListener {

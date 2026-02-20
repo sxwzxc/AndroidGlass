@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 基础玻璃渐变层 -->
     <item>
         <shape android:shape="rectangle">
             <gradient
@@ -13,6 +14,7 @@
             <corners android:radius="22dp" />
         </shape>
     </item>
+    <!-- 内部高光叠加层 -->
     <item
         android:top="1dp"
         android:bottom="1dp"
@@ -23,6 +25,20 @@
                 android:angle="60"
                 android:startColor="#1AFFFFFF"
                 android:endColor="#0DFFFFFF" />
+            <corners android:radius="21dp" />
+        </shape>
+    </item>
+    <!-- 顶部光泽高光 -->
+    <item
+        android:top="1dp"
+        android:left="1dp"
+        android:right="1dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:startColor="#30FFFFFF"
+                android:centerColor="#10FFFFFF"
+                android:endColor="#00FFFFFF" />
             <corners android:radius="21dp" />
         </shape>
     </item>
