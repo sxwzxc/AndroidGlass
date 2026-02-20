@@ -4,7 +4,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_gradient">
+    android:background="@android:color/transparent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/background_scene"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_liquid_scene" />
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollView"
@@ -465,5 +472,79 @@
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="84dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="92dp"
+        android:background="@drawable/bg_glass_card_medium"
+        android:elevation="8dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/sidebar_title"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/sidebar_item_home"
+            style="@style/GlassButton" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/sidebar_item_search"
+            style="@style/GlassButton" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/sidebar_item_settings"
+            style="@style/GlassButton" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_glass_card_medium"
+        android:elevation="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <Button
+            android:layout_width="52dp"
+            android:layout_height="40dp"
+            android:text="@string/floating_item_scan"
+            style="@style/GlassButtonAccent" />
+
+        <Button
+            android:layout_width="52dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="6dp"
+            android:text="@string/floating_item_add"
+            style="@style/GlassButton" />
+
+        <Button
+            android:layout_width="52dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="6dp"
+            android:text="@string/floating_item_chat"
+            style="@style/GlassButton" />
+    </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

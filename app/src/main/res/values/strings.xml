@@ -33,6 +33,14 @@
     <string name="bottom_sheet_option_download">Download</string>
     <string name="bottom_sheet_option_delete">Delete</string>
     <string name="bottom_sheet_close">Close</string>
+    <string name="background_scene">Colorful liquid background scene</string>
+    <string name="sidebar_title">Sidebar</string>
+    <string name="sidebar_item_home">Home</string>
+    <string name="sidebar_item_search">Find</string>
+    <string name="sidebar_item_settings">Prefs</string>
+    <string name="floating_item_scan">Scan</string>
+    <string name="floating_item_add">Add</string>
+    <string name="floating_item_chat">Chat</string>
 
     <string-array name="dropdown_options">
         <item>Frosted Glass</item>
