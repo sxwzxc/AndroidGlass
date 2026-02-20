@@ -502,14 +502,14 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="8dp"
             android:text="@string/sidebar_item_search"
             style="@style/GlassButton" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="8dp"
             android:text="@string/sidebar_item_settings"
             style="@style/GlassButton" />
     </LinearLayout>

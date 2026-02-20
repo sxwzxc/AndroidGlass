@@ -36,8 +36,8 @@
     <string name="background_scene">Colorful liquid background scene</string>
     <string name="sidebar_title">Sidebar</string>
     <string name="sidebar_item_home">Home</string>
-    <string name="sidebar_item_search">Find</string>
-    <string name="sidebar_item_settings">Prefs</string>
+    <string name="sidebar_item_search">Search</string>
+    <string name="sidebar_item_settings">Settings</string>
     <string name="floating_item_scan">Scan</string>
     <string name="floating_item_add">Add</string>
     <string name="floating_item_chat">Chat</string>
