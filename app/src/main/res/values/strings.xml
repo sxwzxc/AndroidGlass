@@ -1,4 +1,45 @@
 <resources>
     <string name="app_name">AndroidGlass</string>
     <string name="hello_message">Hello AndroidGlass!</string>
+
+    <!-- UI Demo strings -->
+    <string name="section_buttons">Buttons</string>
+    <string name="section_inputs">Input Fields</string>
+    <string name="section_list">Contact List</string>
+    <string name="section_dropdown">Dropdown / ComboBox</string>
+    <string name="section_selection">Selection Controls</string>
+    <string name="section_progress">Progress &amp; Seek</string>
+    <string name="section_chips">Chips &amp; Tags</string>
+    <string name="section_dialogs">Dialogs</string>
+
+    <string name="btn_primary">Primary Action</string>
+    <string name="btn_secondary">Secondary</string>
+    <string name="btn_outlined">Outlined</string>
+    <string name="btn_show_dialog">Show Alert Dialog</string>
+    <string name="btn_show_bottom_sheet">Show Bottom Sheet</string>
+
+    <string name="hint_name">Enter your name</string>
+    <string name="hint_email">Enter email address</string>
+    <string name="hint_message">Type a message…</string>
+
+    <string name="dialog_title">Glass Alert</string>
+    <string name="dialog_message">This is a liquid glass styled alert dialog with a frosted glass appearance and a smooth translucent background.</string>
+    <string name="dialog_confirm">Confirm</string>
+    <string name="dialog_dismiss">Dismiss</string>
+
+    <string name="bottom_sheet_title">Glass Bottom Sheet</string>
+    <string name="bottom_sheet_option_share">Share</string>
+    <string name="bottom_sheet_option_copy">Copy Link</string>
+    <string name="bottom_sheet_option_download">Download</string>
+    <string name="bottom_sheet_option_delete">Delete</string>
+    <string name="bottom_sheet_close">Close</string>
+
+    <string-array name="dropdown_options">
+        <item>Frosted Glass</item>
+        <item>Liquid Glass</item>
+        <item>Dark Glass</item>
+        <item>Aurora Glass</item>
+        <item>Crystal Glass</item>
+        <item>Smoke Glass</item>
+    </string-array>
 </resources>

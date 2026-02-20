@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_glass_card"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Handle indicator -->
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:background="@color/glass_border"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bottom_sheet_title"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Option: Share -->
+    <LinearLayout
+        android:id="@+id/optionShare"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/bg_glass_item"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_marginBottom="8dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bottom_sheet_option_share"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <!-- Option: Copy Link -->
+    <LinearLayout
+        android:id="@+id/optionCopy"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/bg_glass_item"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_marginBottom="8dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bottom_sheet_option_copy"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <!-- Option: Download -->
+    <LinearLayout
+        android:id="@+id/optionDownload"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/bg_glass_item"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_marginBottom="8dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bottom_sheet_option_download"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <!-- Option: Delete -->
+    <LinearLayout
+        android:id="@+id/optionDelete"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/bg_glass_item"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_marginBottom="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bottom_sheet_option_delete"
+            android:textColor="@color/accent_pink"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bottom_sheet_close"
+        style="@style/GlassButton" />
+
+</LinearLayout>
