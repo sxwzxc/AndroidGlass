@@ -31,32 +31,41 @@
             android:paddingEnd="16dp">
 
             <!-- Header card -->
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_glass_card"
-                android:orientation="vertical"
-                android:padding="24dp"
                 android:layout_marginBottom="24dp"
-                android:elevation="8dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
+                android:elevation="8dp"
+                android:clipToOutline="true">
+                <com.sxwzxc.androidglass.GlassBackdropView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/bg_liquid_scene" />
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/app_name"
-                    android:textColor="@color/text_primary"
-                    android:textSize="32sp"
-                    android:textStyle="bold"
-                    android:letterSpacing="0.05" />
+                    android:orientation="vertical"
+                    android:padding="24dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="@string/header_subtitle"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="14sp" />
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/app_name"
+                        android:textColor="@color/text_primary"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.05" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/header_subtitle"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </FrameLayout>
 
             <!-- SECTION: Buttons -->
             <TextView
@@ -66,44 +75,53 @@
                 android:layout_marginBottom="8dp"
                 style="@style/GlassSectionTitle" />
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_glass_card"
-                android:orientation="vertical"
-                android:padding="16dp"
-                android:layout_marginBottom="24dp">
-
+                android:layout_marginBottom="24dp"
+                android:clipToOutline="true">
+                <com.sxwzxc.androidglass.GlassBackdropView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/bg_liquid_scene" />
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_horizontal">
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_horizontal">
+
+                        <Button
+                            android:id="@+id/btnPrimary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/btn_primary"
+                            android:layout_marginEnd="8dp"
+                            style="@style/GlassButtonAccent" />
+
+                        <Button
+                            android:id="@+id/btnSecondary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/btn_secondary"
+                            style="@style/GlassButton" />
+                    </LinearLayout>
 
                     <Button
-                        android:id="@+id/btnPrimary"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/btnOutlined"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/btn_primary"
-                        android:layout_marginEnd="8dp"
-                        style="@style/GlassButtonAccent" />
-
-                    <Button
-                        android:id="@+id/btnSecondary"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/btn_secondary"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/btn_outlined"
                         style="@style/GlassButton" />
                 </LinearLayout>
-
-                <Button
-                    android:id="@+id/btnOutlined"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/btn_outlined"
-                    style="@style/GlassButton" />
-            </LinearLayout>
+            </FrameLayout>
 
             <!-- SECTION: Input Fields -->
             <TextView
@@ -113,56 +131,65 @@
                 android:layout_marginBottom="8dp"
                 style="@style/GlassSectionTitle" />
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_glass_card"
-                android:orientation="vertical"
-                android:padding="16dp"
-                android:layout_marginBottom="24dp">
-
-                <EditText
-                    android:id="@+id/inputName"
+                android:layout_marginBottom="24dp"
+                android:clipToOutline="true">
+                <com.sxwzxc.androidglass.GlassBackdropView
                     android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:background="@drawable/bg_glass_input"
-                    android:hint="@string/hint_name"
-                    android:textColor="@color/text_primary"
-                    android:textColorHint="@color/text_hint"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:inputType="textPersonName"
-                    android:singleLine="true" />
-
-                <EditText
-                    android:id="@+id/inputEmail"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/bg_liquid_scene" />
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:background="@drawable/bg_glass_input"
-                    android:hint="@string/hint_email"
-                    android:textColor="@color/text_primary"
-                    android:textColorHint="@color/text_hint"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:inputType="textEmailAddress"
-                    android:singleLine="true"
-                    android:layout_marginTop="12dp" />
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
-                <EditText
-                    android:id="@+id/inputMessage"
-                    android:layout_width="match_parent"
-                    android:layout_height="96dp"
-                    android:background="@drawable/bg_glass_input"
-                    android:hint="@string/hint_message"
-                    android:textColor="@color/text_primary"
-                    android:textColorHint="@color/text_hint"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:paddingTop="12dp"
-                    android:inputType="textMultiLine"
-                    android:gravity="top|start"
-                    android:layout_marginTop="12dp" />
-            </LinearLayout>
+                    <EditText
+                        android:id="@+id/inputName"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/bg_glass_input"
+                        android:hint="@string/hint_name"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_hint"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:inputType="textPersonName"
+                        android:singleLine="true" />
+
+                    <EditText
+                        android:id="@+id/inputEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/bg_glass_input"
+                        android:hint="@string/hint_email"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_hint"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"
+                        android:layout_marginTop="12dp" />
+
+                    <EditText
+                        android:id="@+id/inputMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="96dp"
+                        android:background="@drawable/bg_glass_input"
+                        android:hint="@string/hint_message"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_hint"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingTop="12dp"
+                        android:inputType="textMultiLine"
+                        android:gravity="top|start"
+                        android:layout_marginTop="12dp" />
+                </LinearLayout>
+            </FrameLayout>
 
             <!-- SECTION: Dropdown / ComboBox -->
             <TextView
@@ -172,24 +199,33 @@
                 android:layout_marginBottom="8dp"
                 style="@style/GlassSectionTitle" />
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_glass_card"
-                android:orientation="vertical"
-                android:padding="16dp"
-                android:layout_marginBottom="24dp">
-
-                <Spinner
-                    android:id="@+id/spinnerTheme"
+                android:layout_marginBottom="24dp"
+                android:clipToOutline="true">
+                <com.sxwzxc.androidglass.GlassBackdropView
                     android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:background="@drawable/bg_glass_input"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="8dp"
-                    android:entries="@array/dropdown_options"
-                    android:popupBackground="@color/bg_mid" />
-            </LinearLayout>
+                    android:layout_height="match_parent"
+                    android:src="@drawable/bg_liquid_scene" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <Spinner
+                        android:id="@+id/spinnerTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/bg_glass_input"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="8dp"
+                        android:entries="@array/dropdown_options"
+                        android:popupBackground="@color/bg_mid" />
+                </LinearLayout>
+            </FrameLayout>
 
             <!-- SECTION: Selection Controls -->
             <TextView
@@ -199,83 +235,92 @@
                 android:layout_marginBottom="8dp"
                 style="@style/GlassSectionTitle" />
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_glass_card"
-                android:orientation="vertical"
-                android:padding="16dp"
-                android:layout_marginBottom="24dp">
-
-                <CheckBox
-                    android:id="@+id/checkBlur"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/check_blur"
-                    android:textColor="@color/text_primary"
-                    android:buttonTint="@color/accent_blue"
-                    android:checked="true" />
-
-                <CheckBox
-                    android:id="@+id/checkAnimations"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/check_animations"
-                    android:textColor="@color/text_primary"
-                    android:buttonTint="@color/accent_blue"
-                    android:checked="true"
-                    android:layout_marginTop="4dp" />
-
-                <CheckBox
-                    android:id="@+id/checkDarkMode"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/check_dark_mode"
-                    android:textColor="@color/text_primary"
-                    android:buttonTint="@color/accent_blue"
-                    android:layout_marginTop="4dp" />
-
-                <View
+                android:layout_marginBottom="24dp"
+                android:clipToOutline="true">
+                <com.sxwzxc.androidglass.GlassBackdropView
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/glass_border"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginBottom="12dp" />
-
-                <RadioGroup
-                    android:id="@+id/radioGroupStyle"
-                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/bg_liquid_scene" />
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
-                    <RadioButton
-                        android:id="@+id/radioFrosted"
+                    <CheckBox
+                        android:id="@+id/checkBlur"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/radio_frosted"
+                        android:text="@string/check_blur"
                         android:textColor="@color/text_primary"
-                        android:buttonTint="@color/accent_purple"
+                        android:buttonTint="@color/accent_blue"
                         android:checked="true" />
 
-                    <RadioButton
-                        android:id="@+id/radioLiquid"
+                    <CheckBox
+                        android:id="@+id/checkAnimations"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/radio_liquid"
+                        android:text="@string/check_animations"
                         android:textColor="@color/text_primary"
-                        android:buttonTint="@color/accent_purple"
+                        android:buttonTint="@color/accent_blue"
+                        android:checked="true"
                         android:layout_marginTop="4dp" />
 
-                    <RadioButton
-                        android:id="@+id/radioCrystal"
+                    <CheckBox
+                        android:id="@+id/checkDarkMode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/radio_crystal"
+                        android:text="@string/check_dark_mode"
                         android:textColor="@color/text_primary"
-                        android:buttonTint="@color/accent_purple"
+                        android:buttonTint="@color/accent_blue"
                         android:layout_marginTop="4dp" />
-                </RadioGroup>
-            </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/glass_border"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/radioFrosted"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/radio_frosted"
+                            android:textColor="@color/text_primary"
+                            android:buttonTint="@color/accent_purple"
+                            android:checked="true" />
+
+                        <RadioButton
+                            android:id="@+id/radioLiquid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/radio_liquid"
+                            android:textColor="@color/text_primary"
+                            android:buttonTint="@color/accent_purple"
+                            android:layout_marginTop="4dp" />
+
+                        <RadioButton
+                            android:id="@+id/radioCrystal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/radio_crystal"
+                            android:textColor="@color/text_primary"
+                            android:buttonTint="@color/accent_purple"
+                            android:layout_marginTop="4dp" />
+                    </RadioGroup>
+                </LinearLayout>
+            </FrameLayout>
 
             <!-- SECTION: Progress & Seek -->
             <TextView
@@ -285,48 +330,57 @@
                 android:layout_marginBottom="8dp"
                 style="@style/GlassSectionTitle" />
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_glass_card"
-                android:orientation="vertical"
-                android:padding="16dp"
-                android:layout_marginBottom="24dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/label_loading"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="12sp" />
-
-                <ProgressBar
-                    android:id="@+id/progressBar"
-                    style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_marginBottom="24dp"
+                android:clipToOutline="true">
+                <com.sxwzxc.androidglass.GlassBackdropView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/bg_liquid_scene" />
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:progress="65"
-                    android:progressTint="@color/accent_blue"
-                    android:progressBackgroundTint="@color/glass_border" />
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/label_volume"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="12sp"
-                    android:layout_marginTop="16dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_loading"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
 
-                <SeekBar
-                    android:id="@+id/seekBar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:progress="40"
-                    android:progressTint="@color/accent_teal"
-                    android:thumbTint="@color/accent_teal" />
-            </LinearLayout>
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:progress="65"
+                        android:progressTint="@color/accent_blue"
+                        android:progressBackgroundTint="@color/glass_border" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_volume"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp"
+                        android:layout_marginTop="16dp" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:progress="40"
+                        android:progressTint="@color/accent_teal"
+                        android:thumbTint="@color/accent_teal" />
+                </LinearLayout>
+            </FrameLayout>
 
             <!-- SECTION: Chips & Tags -->
             <TextView
@@ -336,84 +390,93 @@
                 android:layout_marginBottom="8dp"
                 style="@style/GlassSectionTitle" />
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_glass_card"
-                android:orientation="vertical"
-                android:padding="16dp"
-                android:layout_marginBottom="24dp">
-
-                <com.google.android.material.chip.ChipGroup
-                    android:id="@+id/chipGroup"
+                android:layout_marginBottom="24dp"
+                android:clipToOutline="true">
+                <com.sxwzxc.androidglass.GlassBackdropView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="match_parent"
+                    android:src="@drawable/bg_liquid_scene" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/chipBlur"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/chip_blur"
-                        android:checkable="true"
-                        android:checked="true"
-                        style="@style/Widget.MaterialComponents.Chip.Filter"
-                        app:chipBackgroundColor="@color/glass_fill_medium"
-                        app:chipStrokeColor="@color/glass_border"
-                        app:chipStrokeWidth="1dp"
-                        app:checkedIconVisible="true"
-                        android:textColor="@color/text_primary" />
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chipGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/chipGlass"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/chip_glass"
-                        android:checkable="true"
-                        android:checked="true"
-                        style="@style/Widget.MaterialComponents.Chip.Filter"
-                        app:chipBackgroundColor="@color/glass_fill_medium"
-                        app:chipStrokeColor="@color/glass_border"
-                        app:chipStrokeWidth="1dp"
-                        android:textColor="@color/text_primary" />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipBlur"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/chip_blur"
+                            android:checkable="true"
+                            android:checked="true"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            app:chipBackgroundColor="@color/glass_fill_medium"
+                            app:chipStrokeColor="@color/glass_border"
+                            app:chipStrokeWidth="1dp"
+                            app:checkedIconVisible="true"
+                            android:textColor="@color/text_primary" />
 
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/chipLight"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/chip_light"
-                        android:checkable="true"
-                        style="@style/Widget.MaterialComponents.Chip.Filter"
-                        app:chipBackgroundColor="@color/glass_fill_medium"
-                        app:chipStrokeColor="@color/glass_border"
-                        app:chipStrokeWidth="1dp"
-                        android:textColor="@color/text_primary" />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipGlass"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/chip_glass"
+                            android:checkable="true"
+                            android:checked="true"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            app:chipBackgroundColor="@color/glass_fill_medium"
+                            app:chipStrokeColor="@color/glass_border"
+                            app:chipStrokeWidth="1dp"
+                            android:textColor="@color/text_primary" />
 
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/chipDark"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/chip_dark"
-                        android:checkable="true"
-                        style="@style/Widget.MaterialComponents.Chip.Filter"
-                        app:chipBackgroundColor="@color/glass_fill_medium"
-                        app:chipStrokeColor="@color/glass_border"
-                        app:chipStrokeWidth="1dp"
-                        android:textColor="@color/text_primary" />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipLight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/chip_light"
+                            android:checkable="true"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            app:chipBackgroundColor="@color/glass_fill_medium"
+                            app:chipStrokeColor="@color/glass_border"
+                            app:chipStrokeWidth="1dp"
+                            android:textColor="@color/text_primary" />
 
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/chipAurora"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/chip_aurora"
-                        android:checkable="true"
-                        android:checked="true"
-                        style="@style/Widget.MaterialComponents.Chip.Filter"
-                        app:chipBackgroundColor="@color/glass_fill_medium"
-                        app:chipStrokeColor="@color/glass_border"
-                        app:chipStrokeWidth="1dp"
-                        android:textColor="@color/text_primary" />
-                </com.google.android.material.chip.ChipGroup>
-            </LinearLayout>
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipDark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/chip_dark"
+                            android:checkable="true"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            app:chipBackgroundColor="@color/glass_fill_medium"
+                            app:chipStrokeColor="@color/glass_border"
+                            app:chipStrokeWidth="1dp"
+                            android:textColor="@color/text_primary" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipAurora"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/chip_aurora"
+                            android:checkable="true"
+                            android:checked="true"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            app:chipBackgroundColor="@color/glass_fill_medium"
+                            app:chipStrokeColor="@color/glass_border"
+                            app:chipStrokeWidth="1dp"
+                            android:textColor="@color/text_primary" />
+                    </com.google.android.material.chip.ChipGroup>
+                </LinearLayout>
+            </FrameLayout>
 
             <!-- SECTION: Contact List -->
             <TextView
@@ -423,21 +486,30 @@
                 android:layout_marginBottom="8dp"
                 style="@style/GlassSectionTitle" />
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_glass_card"
-                android:orientation="vertical"
-                android:padding="8dp"
-                android:layout_marginBottom="24dp">
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerContacts"
+                android:layout_marginBottom="24dp"
+                android:clipToOutline="true">
+                <com.sxwzxc.androidglass.GlassBackdropView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/bg_liquid_scene" />
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:nestedScrollingEnabled="false"
-                    android:overScrollMode="never" />
-            </LinearLayout>
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerContacts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"
+                        android:overScrollMode="never" />
+                </LinearLayout>
+            </FrameLayout>
 
             <!-- SECTION: Dialogs -->
             <TextView
@@ -447,105 +519,132 @@
                 android:layout_marginBottom="8dp"
                 style="@style/GlassSectionTitle" />
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_glass_card"
-                android:orientation="vertical"
-                android:padding="16dp"
-                android:layout_marginBottom="32dp">
-
-                <Button
-                    android:id="@+id/btnShowDialog"
+                android:layout_marginBottom="32dp"
+                android:clipToOutline="true">
+                <com.sxwzxc.androidglass.GlassBackdropView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/bg_liquid_scene" />
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/btn_show_dialog"
-                    style="@style/GlassButtonAccent" />
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
-                <Button
-                    android:id="@+id/btnShowBottomSheet"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/btn_show_bottom_sheet"
-                    style="@style/GlassButton" />
-            </LinearLayout>
+                    <Button
+                        android:id="@+id/btnShowDialog"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btn_show_dialog"
+                        style="@style/GlassButtonAccent" />
+
+                    <Button
+                        android:id="@+id/btnShowBottomSheet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/btn_show_bottom_sheet"
+                        style="@style/GlassButton" />
+                </LinearLayout>
+            </FrameLayout>
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="84dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginTop="92dp"
         android:background="@drawable/bg_glass_card_medium"
         android:elevation="8dp"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:padding="8dp">
-
-        <TextView
+        android:clipToOutline="true">
+        <com.sxwzxc.androidglass.GlassBackdropView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bg_liquid_scene" />
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/sidebar_title"
-            android:textColor="@color/text_secondary"
-            android:textSize="11sp" />
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="8dp">
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/sidebar_item_home"
-            style="@style/GlassButton" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/sidebar_title"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/sidebar_item_search"
-            style="@style/GlassButton" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/sidebar_item_home"
+                style="@style/GlassButton" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/sidebar_item_settings"
-            style="@style/GlassButton" />
-    </LinearLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/sidebar_item_search"
+                style="@style/GlassButton" />
 
-    <LinearLayout
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/sidebar_item_settings"
+                style="@style/GlassButton" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="56dp"
         android:layout_gravity="bottom|center_horizontal"
         android:layout_marginBottom="20dp"
         android:background="@drawable/bg_glass_card_medium"
         android:elevation="10dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp">
+        android:clipToOutline="true">
+        <com.sxwzxc.androidglass.GlassBackdropView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bg_liquid_scene" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
 
-        <Button
-            android:layout_width="52dp"
-            android:layout_height="40dp"
-            android:text="@string/floating_item_scan"
-            style="@style/GlassButtonAccent" />
+            <Button
+                android:layout_width="52dp"
+                android:layout_height="40dp"
+                android:text="@string/floating_item_scan"
+                style="@style/GlassButtonAccent" />
 
-        <Button
-            android:layout_width="52dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="6dp"
-            android:text="@string/floating_item_add"
-            style="@style/GlassButton" />
+            <Button
+                android:layout_width="52dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="6dp"
+                android:text="@string/floating_item_add"
+                style="@style/GlassButton" />
 
-        <Button
-            android:layout_width="52dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="6dp"
-            android:text="@string/floating_item_chat"
-            style="@style/GlassButton" />
-    </LinearLayout>
+            <Button
+                android:layout_width="52dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="6dp"
+                android:text="@string/floating_item_chat"
+                style="@style/GlassButton" />
+        </LinearLayout>
+    </FrameLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

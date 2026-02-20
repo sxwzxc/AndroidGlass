@@ -34,14 +34,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setupBlurEffects()
         setupRecyclerView()
         setupSpinner()
         setupButtons()
-    }
-
-    private fun setupBlurEffects() {
-        GlassBlurHelper.applyBackgroundBlur(binding.bgScene)
     }
 
     private fun setupRecyclerView() {
