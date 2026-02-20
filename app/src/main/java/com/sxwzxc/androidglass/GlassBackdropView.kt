@@ -21,6 +21,11 @@ class GlassBackdropView @JvmOverloads constructor(
 
     private val scrollListener = ViewTreeObserver.OnScrollChangedListener { updateMatrix() }
 
+    // 预分配以减少滚动时的 GC 压力
+    private val rootLoc = IntArray(2)
+    private val myLoc = IntArray(2)
+    private val imageMatrix2 = Matrix()
+
     init {
         scaleType = ScaleType.MATRIX
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
@@ -62,8 +67,6 @@ class GlassBackdropView @JvmOverloads constructor(
         val scaledTop = (rootH - drawableH * scale) / 2f
 
         // 获取本视图相对根视图的屏幕位置
-        val rootLoc = IntArray(2)
-        val myLoc = IntArray(2)
         root.getLocationOnScreen(rootLoc)
         getLocationOnScreen(myLoc)
 
@@ -71,9 +74,8 @@ class GlassBackdropView @JvmOverloads constructor(
         val relY = (myLoc[1] - rootLoc[1]).toFloat()
 
         // 调整矩阵以显示该视图对应的背景图片区域
-        val m = Matrix()
-        m.setScale(scale, scale)
-        m.postTranslate(scaledLeft - relX, scaledTop - relY)
-        imageMatrix = m
+        imageMatrix2.setScale(scale, scale)
+        imageMatrix2.postTranslate(scaledLeft - relX, scaledTop - relY)
+        imageMatrix = imageMatrix2
     }
 }
