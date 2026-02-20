@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.ArrayAdapter
+import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -66,20 +68,22 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showAlertDialog() {
-        AlertDialog.Builder(this)
-            .setTitle(getString(R.string.dialog_title))
-            .setMessage(getString(R.string.dialog_message))
-            .setPositiveButton(getString(R.string.dialog_confirm)) { _, _ ->
-                Toast.makeText(this, "Confirmed!", Toast.LENGTH_SHORT).show()
-            }
-            .setNegativeButton(getString(R.string.dialog_dismiss), null)
+        val dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_liquid_glass, null)
+        val dialog = AlertDialog.Builder(this)
+            .setView(dialogView)
             .create()
-            .also { dialog ->
-                dialog.show()
-                dialog.window?.setBackgroundDrawable(
-                    ColorDrawable(Color.parseColor("#CC0A0E27"))
-                )
-            }
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        dialog.show()
+
+        dialogView.findViewById<TextView>(R.id.dialogTitle).text = getString(R.string.dialog_title)
+        dialogView.findViewById<TextView>(R.id.dialogMessage).text = getString(R.string.dialog_message)
+        dialogView.findViewById<Button>(R.id.btnDialogConfirm).setOnClickListener {
+            Toast.makeText(this, "Confirmed!", Toast.LENGTH_SHORT).show()
+            dialog.dismiss()
+        }
+        dialogView.findViewById<Button>(R.id.btnDialogDismiss).setOnClickListener {
+            dialog.dismiss()
+        }
     }
 
     private fun showBottomSheet() {
