@@ -9,10 +9,7 @@
         </shape>
     </item>
     <!-- 顶部高光渐变层 -->
-    <item
-        android:top="0dp"
-        android:left="0dp"
-        android:right="0dp">
+    <item>
         <shape android:shape="rectangle">
             <gradient
                 android:angle="270"
